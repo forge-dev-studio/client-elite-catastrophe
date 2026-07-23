@@ -1,0 +1,12 @@
+{
+  "name": "Elite Catastrophe",
+  "altName": "Elite Catastrophe Tree Service",
+  "phone": "(706) 676-7364",
+  "phoneHref": "tel:+17066767364",
+  "addr": { "street": "32 Paris Dr SW", "city": "Rome", "state": "GA", "zip": "30165" },
+  "geo": { "lat": 34.257, "lng": -85.1647 },
+  "baseUrl": "https://forge-dev-studio.github.io/client-elite-catastrophe",
+  "gbpRating": 4.9,
+  "gbpCount": 76,
+  "gbpAsOf": "July 2026"
+}

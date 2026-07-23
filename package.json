@@ -1,0 +1,10 @@
+{
+  "name": "client-elite-catastrophe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node tools/verify.mjs",
+    "cities": "node tools/generate-city-pages.mjs",
+    "sitemap": "node tools/generate-sitemap.mjs"
+  }
+}
