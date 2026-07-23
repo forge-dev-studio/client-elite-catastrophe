@@ -8,5 +8,6 @@
   "baseUrl": "https://forge-dev-studio.github.io/client-elite-catastrophe",
   "gbpRating": 4.9,
   "gbpCount": 77,
-  "gbpAsOf": "July 2026"
+  "gbpAsOf": "July 2026",
+  "noindex": true
 }

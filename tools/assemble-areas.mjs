@@ -23,6 +23,10 @@ for (const f of frags) {
   Object.assign(fCounties, j.counties || {});
   Object.assign(fCities, j.cities || {});
 }
+// richer county-narrative overrides take precedence over the per-tier fragments
+for (const f of ['frag-counties-home.json', 'frag-counties-storm.json']) {
+  if (existsSync(D(f))) Object.assign(fCounties, JSON.parse(readFileSync(D(f), 'utf8')));
+}
 
 // build cities.json
 const cities = roster.cities.map(c => {
