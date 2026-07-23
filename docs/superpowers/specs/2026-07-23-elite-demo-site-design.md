@@ -92,7 +92,8 @@ Phase-2 backlog (post-cutover monthly content engine): metal-roof-over-shingles 
 
 ## 7. Schema
 
-- Home: `HomeAndConstructionBusiness` (NOT RoofingContractor — would re-poison the entity) with name, phone, url, real address (32 Paris Dr SW Rome GA 30165 in schema only), geo, areaServed (8 cities), aggregateRating omitted until testimonial/rating verification (standing rule).
+- **Business name rule (NAP): schema `name` = the GBP display name, exact match, at launch — "Elite Catastrophe"** (never mirror GBP's current lowercase-c typo; that's a GBP surgery item). The Facebook variant is captured as `alternateName: "Elite Catastrophe Tree Service"`, never as the primary name — the client already has a 4-way name-variant problem and this build must not add a fifth. The name is held in ONE build token (site config) so a future rebrand flips sitewide in one line. Page titles are descriptor + brand ("Tree Service in Rome, GA | Elite Catastrophe") — titles are not the NAP name and carry the tree keyword freely. **Open strategic option (Andrew's call, GBP-surgery workstream): standardize the real-world brand as "Elite Catastrophe Tree Service" everywhere (FB precedent gives Google-policy cover); if approved, GBP + site token + citations change together.**
+- Home: `HomeAndConstructionBusiness` (NOT RoofingContractor — would re-poison the entity) with name (per rule above), phone, url, real address (32 Paris Dr SW Rome GA 30165 in schema only), geo, areaServed (8 cities), aggregateRating omitted until testimonial/rating verification (standing rule).
 - Service pages: `Service` with provider ref + areaServed.
 - City pages: `Service` + `areaServed` (SAB pattern — the standing rule for service-area businesses).
 - Blog posts: `BlogPosting` + `FAQPage` where the post answers question clusters.
