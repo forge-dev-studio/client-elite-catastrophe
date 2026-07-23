@@ -85,8 +85,9 @@ Phase-2 backlog (post-cutover monthly content engine): metal-roof-over-shingles 
 
 ## 6. Design system
 
-- Colors: Elite teal `#68ccd1`, yellow `#f7d000` (verified from their live Duda CSS), dark ink for text on white; AA contrast enforced (teal is light: use on dark backgrounds or as accent, never light-on-white body text).
-- Type: Poppins (clean geometric sans, matches existing brand; complies with no-decorative-fonts rule).
+- Colors — LOGO-DERIVED (revised 2026-07-23: Corey supplied the actual logo, ink + terracotta; the earlier teal/yellow were Duda template CSS colors, not brand colors. Client report styling used teal/yellow — flagged to Eric, palette is a token swap if overridden): ink `#1a1a1a`, terracotta accent family (logo tone ≈ `#de9668` for tints/highlights; deepened ≈ `#b45f33` for interactive/CTA where AA contrast on white demands it), neutral gray scale from the monogram, generous white space per the logo's character. Optional sparing deep-evergreen support tone for tree-lane accents if it earns its place. AA contrast enforced everywhere.
+- Logo asset: pull the real logo file from elitecatastrophe.com (their live Duda site) at build time; fallback = styled text lockup ("ELITE" ink / "CATASTROPHE" terracotta, wide-tracked Poppins Light) matching the wordmark. Get the original file from Andrew before cutover.
+- Type: Poppins (clean geometric sans; the logo wordmark is a thin geometric sans, so Poppins with light weights + wide tracking matches; complies with no-decorative-fonts rule).
 - Components: sticky header w/ phone CTA, hero w/ dual CTA (Call + Free Estimate), service cards, review badge (live), city-page template, blog cards, footer with services + areas + NAP-lite.
 - Photography: real Elite photos when Andrew provides; until then neutral/unsplash placeholders flagged `data-placeholder` (cutover blocker to replace — same as Dasher).
 
