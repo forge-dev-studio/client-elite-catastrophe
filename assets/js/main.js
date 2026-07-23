@@ -80,25 +80,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- Live review badge (static fallback text stays on any failure) ---
-  async function hydrateReviewBadge() {
-    const els = document.querySelectorAll('[data-review-badge]');
-    if (!els.length) return;
-    const endpoint = els[0].dataset.endpoint;
-    if (!endpoint) return;
+  // --- Live review badge + reviews list (static fallback stays on any failure) ---
+  const REVIEWS_ENDPOINT = 'https://vbw-reviews.synergycloud.workers.dev/reviews?place=ChIJm-SuBmnaz0MRRNGQZ5GfNBs';
+  async function hydrateReviews() {
+    const badges = document.querySelectorAll('[data-review-badge]');
+    const list = document.querySelector('[data-reviews-list]');
+    if (!badges.length && !list) return;
     try {
-      const r = await fetch(endpoint, { signal: AbortSignal.timeout(2500) });
+      const r = await fetch(REVIEWS_ENDPOINT, { signal: AbortSignal.timeout(3500) });
       const d = await r.json();
-      const rating = d.rating, count = d.count ?? d.reviews;
-      if (rating && count) {
-        els.forEach(el => {
+      if (d.rating && typeof d.total === 'number' && d.total > 0) {
+        badges.forEach(el => {
           const num = el.querySelector('[data-badge-text]') || el;
-          num.textContent = `${rating}★ · ${count} Google reviews`;
+          num.innerHTML = `${d.rating}★ · ${d.total} Google reviews<span class="sub">live from Google</span>`;
         });
+      }
+      if (list && Array.isArray(d.reviews) && d.reviews.length) {
+        list.innerHTML = d.reviews.slice(0, 3).map(rv => {
+          const text = (rv.text || '').replace(/</g, '&lt;').slice(0, 220);
+          const author = (rv.author || 'Google user').replace(/</g, '&lt;');
+          const stars = '★'.repeat(Math.round(rv.rating || 5));
+          return `<div class="side-card" style="margin-bottom:16px;">
+            <span class="stars" style="color:var(--terra-deep);letter-spacing:2px;">${stars}</span>
+            <p style="font-size:.93rem;margin:10px 0;">"${text}${(rv.text || '').length > 220 ? '…' : ''}"</p>
+            <p style="font-size:.8rem;color:var(--gray-4);font-weight:600;">${author}</p>
+          </div>`;
+        }).join('') + '<p style="font-size:.72rem;color:var(--gray-4);">Powered by Google</p>';
+        list.hidden = false;
       }
     } catch { /* keep static fallback */ }
   }
-  hydrateReviewBadge();
+  hydrateReviews();
 
   // --- Contact form placeholder (GHL wiring at cutover) ---
   const form = document.getElementById('contactForm');
