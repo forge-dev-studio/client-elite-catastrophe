@@ -1,0 +1,43 @@
+{
+  "counties": [
+    { "slug": "floyd-county", "name": "Floyd County", "tier": "home", "seat": "Rome", "hamlets": [] },
+    { "slug": "polk-county", "name": "Polk County", "tier": "home", "seat": "Cedartown", "hamlets": [] },
+    { "slug": "gordon-county", "name": "Gordon County", "tier": "home", "seat": "Calhoun", "hamlets": ["Fairmount", "Plainville", "Ranger"] },
+    { "slug": "chattooga-county", "name": "Chattooga County", "tier": "home", "seat": "Summerville", "hamlets": ["Lyerly", "Menlo"] },
+    { "slug": "bartow-county", "name": "Bartow County", "tier": "home", "seat": "Cartersville", "hamlets": ["Kingston", "Taylorsville", "White"] },
+    { "slug": "cherokee-county", "name": "Cherokee County", "tier": "storm", "seat": "Canton", "hamlets": [] },
+    { "slug": "cobb-county", "name": "Cobb County", "tier": "storm", "seat": "Marietta", "hamlets": [] },
+    { "slug": "paulding-county", "name": "Paulding County", "tier": "storm", "seat": "Dallas", "hamlets": ["Braswell"] }
+  ],
+  "cities": [
+    { "slug": "rome", "name": "Rome", "county": "Floyd County", "countySlug": "floyd-county", "tier": "home", "pop": 37713, "existing": true },
+    { "slug": "lindale", "name": "Lindale", "county": "Floyd County", "countySlug": "floyd-county", "tier": "home", "pop": 4200, "existing": true },
+    { "slug": "cave-spring", "name": "Cave Spring", "county": "Floyd County", "countySlug": "floyd-county", "tier": "home", "pop": 1174 },
+    { "slug": "cedartown", "name": "Cedartown", "county": "Polk County", "countySlug": "polk-county", "tier": "home", "pop": 10190, "existing": true },
+    { "slug": "rockmart", "name": "Rockmart", "county": "Polk County", "countySlug": "polk-county", "tier": "home", "pop": 4730, "existing": true },
+    { "slug": "aragon", "name": "Aragon", "county": "Polk County", "countySlug": "polk-county", "tier": "home", "pop": 1440 },
+    { "slug": "calhoun", "name": "Calhoun", "county": "Gordon County", "countySlug": "gordon-county", "tier": "home", "pop": 16949, "existing": true },
+    { "slug": "resaca", "name": "Resaca", "county": "Gordon County", "countySlug": "gordon-county", "tier": "home", "pop": 1142 },
+    { "slug": "summerville", "name": "Summerville", "county": "Chattooga County", "countySlug": "chattooga-county", "tier": "home", "pop": 4435, "existing": true },
+    { "slug": "trion", "name": "Trion", "county": "Chattooga County", "countySlug": "chattooga-county", "tier": "home", "pop": 1960 },
+    { "slug": "cartersville", "name": "Cartersville", "county": "Bartow County", "countySlug": "bartow-county", "tier": "home", "pop": 23187, "existing": true },
+    { "slug": "adairsville", "name": "Adairsville", "county": "Bartow County", "countySlug": "bartow-county", "tier": "home", "pop": 4878, "existing": true },
+    { "slug": "emerson", "name": "Emerson", "county": "Bartow County", "countySlug": "bartow-county", "tier": "home", "pop": 1415 },
+    { "slug": "euharlee", "name": "Euharlee", "county": "Bartow County", "countySlug": "bartow-county", "tier": "home", "pop": 4268 },
+    { "slug": "canton", "name": "Canton", "county": "Cherokee County", "countySlug": "cherokee-county", "tier": "storm", "pop": 32973 },
+    { "slug": "woodstock", "name": "Woodstock", "county": "Cherokee County", "countySlug": "cherokee-county", "tier": "storm", "pop": 35065 },
+    { "slug": "holly-springs", "name": "Holly Springs", "county": "Cherokee County", "countySlug": "cherokee-county", "tier": "storm", "pop": 16213 },
+    { "slug": "ball-ground", "name": "Ball Ground", "county": "Cherokee County", "countySlug": "cherokee-county", "tier": "storm", "pop": 2560 },
+    { "slug": "waleska", "name": "Waleska", "county": "Cherokee County", "countySlug": "cherokee-county", "tier": "storm", "pop": 921 },
+    { "slug": "nelson", "name": "Nelson", "county": "Cherokee County", "countySlug": "cherokee-county", "tier": "storm", "pop": 1145 },
+    { "slug": "marietta", "name": "Marietta", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 60972 },
+    { "slug": "kennesaw", "name": "Kennesaw", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 33036 },
+    { "slug": "acworth", "name": "Acworth", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 22440 },
+    { "slug": "smyrna", "name": "Smyrna", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 55663 },
+    { "slug": "powder-springs", "name": "Powder Springs", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 16887 },
+    { "slug": "austell", "name": "Austell", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 7713 },
+    { "slug": "mableton", "name": "Mableton", "county": "Cobb County", "countySlug": "cobb-county", "tier": "storm", "pop": 40834 },
+    { "slug": "dallas", "name": "Dallas", "county": "Paulding County", "countySlug": "paulding-county", "tier": "storm", "pop": 14042 },
+    { "slug": "hiram", "name": "Hiram", "county": "Paulding County", "countySlug": "paulding-county", "tier": "storm", "pop": 4929 }
+  ]
+}

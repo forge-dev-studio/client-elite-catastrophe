@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "verify": "node tools/verify.mjs",
-    "cities": "node tools/generate-city-pages.mjs",
+    "areas": "node tools/assemble-areas.mjs && node tools/generate-areas.mjs",
     "sitemap": "node tools/generate-sitemap.mjs"
   }
 }

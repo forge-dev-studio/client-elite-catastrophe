@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "floyd-county",
+    "name": "Floyd County",
+    "tier": "home",
+    "seat": "Rome",
+    "hamlets": [],
+    "cities": [
+      "rome",
+      "lindale",
+      "cave-spring"
+    ],
+    "narrative": "Elite Catastrophe is based in Floyd County, so this is the ground we know best. The county wraps around Rome where the Oostanaula, Etowah, and Coosa rivers meet, and the mix of hillside neighborhoods, river-bottom yards, and rural acreage gives it a heavy and varied tree load. Water oaks and red oaks shade the older in-town lots, many of them taller than the houses beneath them and prone to hollowing out with age. Out in the bottoms and along the ridges, loblolly and shortleaf pines stand in red clay that loses its grip after a soaking rain. Sweetgums scatter wood in every summer blow. Because we live here, Floyd County sees our crews more than anywhere else: removals in tight yards, structural pruning, deadwooding older hardwoods, and stump grinding. When severe weather crosses the county, Elite Catastrophe answers storm calls 24/7. Most days, though, the work is calmer and planned well ahead."
+  },
+  {
+    "slug": "polk-county",
+    "name": "Polk County",
+    "tier": "home",
+    "seat": "Cedartown",
+    "hamlets": [],
+    "cities": [
+      "cedartown",
+      "rockmart",
+      "aragon"
+    ],
+    "narrative": "South and east of Rome, Polk County trades river bottoms for rolling farmland and the old mill towns of Cedartown and Rockmart. The canopy here is classic Northwest Georgia: red oaks and water oaks over the in-town streets, sweetgums along the fencerows, and thick stands of loblolly and shortleaf pine ringing the edges of both towns and filling the newer subdivisions. Those leftover pines are the county's most common hazard, tall and shallow-rooted in clay that softens after a long rain. Mature hardwoods carry their own risk, declining from the inside while looking full and green from the road. Elite Catastrophe works Polk County every week from our Rome base, handling removals, crown reduction, clearance pruning, and stump grinding. Anyone who has walked the Silver Comet Trail knows how much of the county's character rides on its trees. When storms tear through, our crews run 24/7 until the calls stop."
+  },
+  {
+    "slug": "gordon-county",
+    "name": "Gordon County",
+    "tier": "home",
+    "seat": "Calhoun",
+    "hamlets": [
+      "Fairmount",
+      "Plainville",
+      "Ranger"
+    ],
+    "cities": [
+      "calhoun",
+      "resaca"
+    ],
+    "narrative": "Gordon County sits along the I-75 corridor north of Rome, built around Calhoun and the smaller river towns like Resaca. The Oostanaula and its feeder creeks run wooded bottoms through the county, and those damp, low-lying stands are where clay stays soft the longest. On the higher ground, established neighborhoods hold mature water oaks and red oaks with limbs reaching over rooftops and drives, while the fast-growing corridor near the interstate keeps leaving tall loblolly pines exposed after the graders move on. Both patterns fail in the ways we see everywhere in Northwest Georgia: hardwoods hollowing out unseen, pines uprooting in saturated ground, sweetgums dropping wood in a stiff wind. Elite Catastrophe covers Gordon County on a regular schedule from Rome, bringing the same crew and equipment we use at home for removals, pruning, hazard checks, and stump grinding. When severe weather crosses the county, our storm crews respond 24/7."
+  },
+  {
+    "slug": "chattooga-county",
+    "name": "Chattooga County",
+    "tier": "home",
+    "seat": "Summerville",
+    "hamlets": [
+      "Lyerly",
+      "Menlo"
+    ],
+    "cities": [
+      "summerville",
+      "trion"
+    ],
+    "narrative": "North of Rome the land climbs toward the Lookout Mountain foothills, and Chattooga County is where our trees get truly wind-tested. Summerville and Trion sit down in the valley, where storms funnel along the ridgelines and gusts pour over the shoulders of the slopes. Trees here anchor in thinner soil, lean harder toward the light, and lose crowns in a single rough afternoon. The species are the familiar ones: loblolly and shortleaf pine that snap or uproot in wet clay, water oaks that hollow with age, red oaks carrying heavy horizontal limbs, and sweetgums that shed wood in every blow. What the foothills add is exposure, which turns an ordinary leaner into a real hazard. Elite Catastrophe makes the drive up from Rome often, because Chattooga County homeowners live with some of the most storm-tested trees in our whole range. When the weather turns dangerous, our crews field storm calls 24/7."
+  },
+  {
+    "slug": "bartow-county",
+    "name": "Bartow County",
+    "tier": "home",
+    "seat": "Cartersville",
+    "hamlets": [
+      "Kingston",
+      "Taylorsville",
+      "White"
+    ],
+    "cities": [
+      "cartersville",
+      "adairsville",
+      "emerson",
+      "euharlee"
+    ],
+    "narrative": "East of Rome along I-75, Bartow County runs from the historic streets of Adairsville and Cartersville down to Lake Allatoona and the growing towns of Emerson and Euharlee. It is a county of contrasts for tree work. Old town centers keep generations-old oaks and sweetgums over close house lots, while newer subdivisions near the lake and the interstate leave tall leftover pines standing in graded, compacted clay. Mature water oaks here decline from the inside and drop heavy limbs on calm days. Construction-stressed pines look fine for a few summers, then brown out and turn brittle. Sweetgums split at weak unions and scatter wood every time the wind picks up. Elite Catastrophe covers Bartow County from our Rome base with the same family-owned crew we send through our own neighborhoods, handling removals, trimming, crown work, hazard evaluations, and stump grinding. When a storm system rakes across the county, our crews answer emergency calls 24/7."
+  },
+  {
+    "slug": "cherokee-county",
+    "name": "Cherokee County",
+    "tier": "storm",
+    "seat": "Canton",
+    "hamlets": [],
+    "cities": [
+      "canton",
+      "woodstock",
+      "holly-springs",
+      "ball-ground",
+      "waleska",
+      "nelson"
+    ],
+    "narrative": "Cherokee County sits on the fast-growing northern edge of metro Atlanta, and Elite Catastrophe is not a daily fixture on these streets. What brings us here is weather. When a North Georgia storm line rolls across the county and leaves trees on roofs, across driveways, and down on power lines, our crew loads up in Rome and deploys to handle the emergency. That is the honest arrangement: a Rome-based, family-owned storm crew that answers the call 24/7 and drives to where the damage is. Cherokee carries a heavy tree load, from the mature oaks over older downtown neighborhoods to the leftover pines in the newer subdivisions, all rooted in red clay that softens after a long rain. When straight-line winds and hail get serious, those trees fail into houses. We work structures first: the tree through the bedroom, the limb pinning a car, the trunk blocking the only way out. Removals, trimming, and stump grinding are available too, but the reason to keep our number is the storm."
+  },
+  {
+    "slug": "cobb-county",
+    "name": "Cobb County",
+    "tier": "storm",
+    "seat": "Marietta",
+    "hamlets": [],
+    "cities": [
+      "marietta",
+      "kennesaw",
+      "acworth",
+      "smyrna",
+      "powder-springs",
+      "austell",
+      "mableton"
+    ],
+    "narrative": "Cobb County sits well southeast of Rome, and Elite Catastrophe is not a daily fixture on these streets. What brings us down here is weather. When a spring or summer storm line rolls across metro Atlanta and leaves trees on roofs, across driveways, and down on power lines, our crews load up in Rome and deploy to Cobb to handle the emergency. That is the honest arrangement: a Rome-based, family-owned storm crew that answers the call 24/7 and drives to where the damage is. Cobb carries a heavy tree load, from the mature oaks over older Marietta and Smyrna neighborhoods to the leftover pines in newer south-county subdivisions, so when the wind gets serious there are plenty of targets. We work structures first: the tree through the bedroom, the limb pinning a car, the trunk blocking the only way out. Removals, trimming, and stump grinding are available too, but the reason to keep our number is the storm."
+  },
+  {
+    "slug": "paulding-county",
+    "name": "Paulding County",
+    "tier": "storm",
+    "seat": "Dallas",
+    "hamlets": [
+      "Braswell"
+    ],
+    "cities": [
+      "dallas",
+      "hiram"
+    ],
+    "narrative": "Paulding County has filled in fast on the western side of metro Atlanta, trading open ground for wooded subdivisions where pines and hardwoods now stand close to houses. Elite Catastrophe is not local to Paulding, and we will not pretend otherwise. We are a Rome-based, family-owned storm-response crew, and what puts us on the road down here is severe weather. When a spring or summer storm saturates the red clay, drives straight-line winds through, and drops trees on homes, driveways, and power lines, we deploy from Rome and answer the emergency 24/7. The county's red clay is the quiet culprit. It holds water long after the rain stops, and a loblolly pine rooted in soft ground has little to hold when the wind leans on it. Big hardwoods come apart too, splitting or shedding heavy limbs onto whatever sits below. We run structures first every time: trees on houses, limbs over doorways, trunks across the only road out. Removals, trimming, and stump grinding follow once the immediate hazards are down."
+  }
+]
