@@ -1,6 +1,6 @@
 # Elite Catastrophe Demo Site — Design Spec (2026-07-23)
 
-Approved by Corey 2026-07-23 (chat). Attribution: **Synergy Telecom** (never Forge) on all Elite-facing deliverables.
+Approved by Corey 2026-07-23 (chat). Revised same day per Corey: blog expanded 6 → 12 posts for full coverage of every measured keyword cluster. Attribution: **Synergy Telecom** (never Forge) on all Elite-facing deliverables.
 
 ## 1. Purpose
 
@@ -27,7 +27,7 @@ Build the cutover-ready demo site for Elite Catastrophe LLC (Rome GA tree servic
 | results/elite-blogkw2-ideas-2026-07-23.json | Round-2 keywords_for_keywords expansion (issues + big-jobs lenses) |
 | configs/elite-catastrophe.md | Config, integrity flags, license working assumption |
 
-## 4. Architecture — 28 pages, extensionless URLs
+## 4. Architecture — 34 pages, extensionless URLs
 
 ```
 /                               Home — tree-first identity
@@ -48,12 +48,14 @@ Build the cutover-ready demo site for Elite Catastrophe LLC (Rome GA tree servic
                                 8 city pages, tree-first, hand-written narratives,
                                 storm-response mention, NO roofing city pages
 /blog/                          Hub
-/blog/{6 posts — section 5}
+/blog/{12 posts — section 5}
 /404.html                       Base-href-injected (GitHub Pages nested-path pattern)
 + sitemap.xml, robots.txt, .nojekyll
 ```
 
-## 5. Blog lineup — 6 posts, weighted toward big-ticket jobs
+## 5. Blog lineup — 12 posts, one per measured cluster (revised 2026-07-23 per Corey: full cluster coverage at launch)
+
+**Flagship six (big-ticket job intent):**
 
 | # | Post (working title) | Cluster + US/mo anchors | Job value |
 |---|---|---|---|
@@ -62,9 +64,22 @@ Build the cutover-ready demo site for Elite Catastrophe LLC (Rome GA tree servic
 | 3 | Is That Tree Going to Fall? Leaning Trees and Warning Signs | leaning tree 2,900 + signs a tree is dying 2,900 + how to tell if a tree is dead 2,900 + tree too close to house 720 | Hazard-removal pipeline |
 | 4 | Will Insurance Replace Your Roof After Storm Damage? | roofer insurance claim 2,600 + roof replacement insurance 1,300 + does/will insurance cover 960 + how to get insurance to pay 880 | Full roof replacements |
 | 5 | Roof Tarping After a Storm: Cost, How Long It Lasts, Who to Call | roof tarp + roof tarping 13,200 combined + how to tarp a roof 880 + emergency roof tarp 590 | Storm-job front door |
-| 6 | How Much Does Tree Removal Cost in Georgia? | tree removal cost 12,100 + how much to cut down a tree 2,400 + stump grinding cost 4,400 + stump removal cost 5,400 | Traffic + lead post |
+| 6 | How Much Does Tree Removal Cost in Georgia? | tree removal cost 12,100 + how much to cut down a tree 2,400 + large/oak/pine cost variants | Traffic + lead post |
 
-Phase-2 backlog (post-cutover content engine): attic ventilation cluster (attic fan 40,500 + soffit vents 27,100 + attic ventilation 22,200 + ridge vent 18,100), water stains on ceiling 3,600×4, roof cost family 22,200+, hail-damage identification 5,400, storm damage restoration GA-angle pillar (110,000 US head term). Excluded intents: B2B terms (tree service insurance = insurance FOR tree companies), botany terms, DIY-gear terms.
+**Coverage six (topical authority + traffic):**
+
+| # | Post (working title) | Cluster + US/mo anchors | Lane |
+|---|---|---|---|
+| 7 | Attic Ventilation: Signs Your Roof Can't Breathe | attic fan 40,500 + soffit vents 27,100 + attic ventilation 22,200 + ridge vent 18,100 + roof ventilation 18,100 | Roof |
+| 8 | What a New Roof Really Costs (and What Drives the Price) | roof replacement cost 22,200 + metal roof cost 12,100 + new roof cost 9,900 + roof repair cost 6,600 + inspection cost 2,900 | Roof |
+| 9 | Water Stains on the Ceiling: Roof Leak or Something Else? | water stains/marks/spots on ceiling 3,600×4 + water dripping from ceiling 2,900 + roof leak repair cost 2,900 | Roof |
+| 10 | What Hail Damage Looks Like on a Roof | hail damage roof 5,400 + what does hail damage look like 1,000×2 + hail damage shingles 1,300 + wind damage shingles 1,000 | Roof |
+| 11 | Roof Flashing: Where Most Leaks Actually Start | roof flashing installation 6,600 + install chimney flashing 2,900 + step flashing 590 | Roof |
+| 12 | Stump Grinding vs. Stump Removal: Which One Do You Need? | stump removal cost 5,400 + stump grinding cost 4,400 + stump removal 320 + stump grinding 3,600 GA | Tree |
+
+Split: 5 tree-side + 7 roof-side. The roof lean is intentional — the blog IS the roofing lane (ARAC model); tree owns the service pages and city architecture. Every post internal-links to its matching service page and carries FAQPage schema where it answers question clusters.
+
+Phase-2 backlog (post-cutover monthly content engine): metal-roof-over-shingles / materials questions (can you put metal over shingles 1,600×3 + fiberglass shingles 2,900 + Owens Corning 1,900), storm damage restoration GA-angle pillar (110,000 US head term), storm gutter damage angle, seasonal storm-prep content, city-angled variants of the flagship posts, refreshes. Excluded intents: B2B terms (tree service insurance = insurance FOR tree companies), botany terms, DIY-gear terms.
 
 **Excluded content, permanent:** land clearing / lot clearing / forestry mulching (Legacy Land Care client conflict).
 
@@ -120,7 +135,7 @@ GBP category surgery + citation cleanup (separate workstream); GHL/Jobber integr
 
 ## 13. Success criteria
 
-- verify.mjs green across all 28 pages, zero forbidden-claim hits.
+- verify.mjs green across all 34 pages, zero forbidden-claim hits.
 - Live demo URL serving the full extensionless matrix (every directory + nested path 200s).
 - Entity test readable on the page: view-source shows tree-first titles/H1s/schema on home + city pages, storm/roofing subordinate.
 - Live review badge rendering real GBP numbers with graceful fallback.
