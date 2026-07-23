@@ -76,9 +76,10 @@ section { position: relative; padding: 88px 0; }
 .display { font-weight: 200; letter-spacing: .14em; text-transform: uppercase; }
 
 /* ---------- Logo lockup ---------- */
-.logo { display: inline-flex; flex-direction: column; justify-content: center; line-height: 1.05;
-  min-height: 38px; padding-left: 46px;
-  background: url(../img/logo-mark.svg) left center / 38px 38px no-repeat; }
+/* header/footer logo = their real logo (phone cropped, recolored light for dark bg) */
+.logo { display: block; width: 128px; height: 50px; padding: 0;
+  background: url(../img/logo-header.png) left center / contain no-repeat; }
+.logo span { display: none; }
 .logo .l1 { font-weight: 500; letter-spacing: .2em; font-size: 1.05rem; }
 .logo .l2 { font-weight: 300; letter-spacing: .3em; color: var(--orange); font-size: .8rem; text-transform: uppercase; }
 

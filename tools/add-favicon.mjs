@@ -17,7 +17,7 @@ for (const f of htmlFiles()) {
   if (/rel=["']icon["']/.test(html)) continue;
   const m = html.match(/href="([^"]*)assets\/css\/styles\.css"/);
   const pre = m ? m[1] : '';
-  const link = `\n  <link rel="icon" href="${pre}assets/img/favicon.svg" type="image/svg+xml">`;
+  const link = `\n  <link rel="icon" href="${pre}assets/img/favicon.png" type="image/png">`;
   const out = html.replace(/(<meta name="twitter:card"[^>]*>)/, `$1${link}`);
   if (out !== html) { writeFileSync(f, out); n++; }
 }
