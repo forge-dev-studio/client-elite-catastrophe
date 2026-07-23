@@ -33,7 +33,7 @@ function head(title, desc, url, r, ogType = 'website', jsonld = '') {
   <meta property="og:url" content="${url}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(desc)}">
-  <meta property="og:image" content="${BASE}/assets/img/logo.jpg">
+  <meta property="og:image" content="${BASE}/assets/img/og-card.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="${r}assets/img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
