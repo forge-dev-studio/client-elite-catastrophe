@@ -113,6 +113,7 @@ function foot(r) {
             <li><a href="${TEL}">${PH}</a></li>
             <li>Serving Rome &amp; Northwest Georgia</li>
             <li>Available 24/7 for storm emergencies</li>
+            <li><a href="${r}reviews">Read our Google reviews</a></li>
             <li><a href="${r}contact">Request a free estimate</a></li>
           </ul>
         </div>
@@ -246,7 +247,7 @@ for (const co of counties) {
         ${hamletLine}
         <h2>Cities we serve in ${esc(co.name)}</h2>
         <ul>
-          ${pageCities.map(c => `<li><a href="../${c.slug}/">${storm ? 'Storm damage tree service' : 'Tree service'} in ${esc(c.name)}</a></li>`).join('\n          ')}
+          ${pageCities.map(c => `<li><a href="../${c.slug}/">${esc(c.name)}, GA</a></li>`).join('\n          ')}
         </ul>
       </div>
       <aside class="sidebar">
