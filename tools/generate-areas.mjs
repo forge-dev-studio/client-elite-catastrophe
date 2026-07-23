@@ -140,7 +140,7 @@ for (const c of cities) {
     ? `${c.name}, GA Storm Damage & Emergency Tree Service | Elite Catastrophe`
     : `${c.name}, GA Tree Service & Tree Removal | Elite Catastrophe`;
   const desc = storm
-    ? `Storm damage tree removal and 24/7 emergency tree service in ${c.name}, ${c.county}. Elite Catastrophe deploys from Rome when severe weather hits.`
+    ? `Tree removal, storm damage cleanup, and roof work in ${c.name}, ${c.county}. Elite Catastrophe serves ${c.name} year round, with fast 24/7 storm response.`
     : `Tree removal, trimming, and stump grinding in ${c.name}, Georgia. Elite Catastrophe serves ${c.county} with careful tree work and 24/7 storm response.`;
   const h1 = storm ? `Storm Damage & Emergency Tree Service in ${c.name}, GA` : `Tree Service in ${c.name}, Georgia`;
   const paragraphs = c.narrative.split(/\n\n+/).map(p => `<p>${esc(p.trim())}</p>`).join('\n        ');
@@ -149,7 +149,9 @@ for (const c of cities) {
     ? [['emergency-tree-service', '24/7 emergency tree service', 'when a storm drops a tree on your home'],
        ['storm-damage-restoration', 'Storm damage restoration', 'from the tree to the roof it landed on'],
        ['roof-tarping', 'Emergency roof tarping', 'to stop the water until repairs are made'],
-       ['tree-removal', 'Tree removal', 'for the hazards a storm leaves standing']]
+       ['tree-removal', 'Tree removal', 'storm-driven or scheduled, any time of year'],
+       ['tree-trimming', 'Tree trimming and pruning', 'to keep the canopy off your roof'],
+       ['stump-grinding', 'Stump grinding and removal', 'to finish the job clean']]
     : [['tree-removal', 'Tree removal', 'from single problem trees to full takedowns'],
        ['tree-trimming', 'Tree trimming and pruning', 'for health, clearance, and storm prep'],
        ['stump-grinding', 'Stump grinding and removal', 'to finish the job properly'],
@@ -178,6 +180,9 @@ for (const c of cities) {
         <ul>
           ${services.map(([slug, label, tail]) => `<li><a href="${r}services/${slug}">${label}</a>, ${tail}</li>`).join('\n          ')}
         </ul>
+        ${storm
+          ? `<p>Everyday tree work in ${esc(c.name)} is available year round, not only after a storm. When severe weather does hit, we are the crew that answers fast and works structures first.</p>`
+          : `<p>Storms hit Northwest Georgia hard, and we handle both sides of the damage. See our <a href="${r}services/storm-roofing">storm and roofing</a> work.</p>`}
         <p>Estimates are free, and you will get a straight answer about what the job takes. Call <a href="${TEL}">${PH}</a> or <a href="${r}contact">request an estimate online</a>.</p>
       </div>
       <aside class="sidebar">
@@ -191,7 +196,7 @@ for (const c of cities) {
         </div>
         <div class="side-card cta">
           <h3>${storm ? 'Storm damage now?' : 'Talk to the crew'}</h3>
-          <p>${storm ? `Tree on the house in ${esc(c.name)}? We answer around the clock and deploy fast across ${esc(co.name)}.` : `Free estimates in ${esc(c.name)} and across ${esc(co.name)}. Storm emergencies answered around the clock.`}</p>
+          <p>${storm ? `Tree on the house in ${esc(c.name)}? We answer around the clock. Full tree and roof service across ${esc(co.name)}, storm or shine.` : `Free estimates in ${esc(c.name)} and across ${esc(co.name)}. Storm emergencies answered around the clock.`}</p>
           <a href="${TEL}" class="btn btn-light">${PH}</a>
         </div>
       </aside>
@@ -212,9 +217,9 @@ for (const co of counties) {
     ? `${co.name}, GA Storm Damage & Tree Service | Elite Catastrophe`
     : `${co.name}, GA Tree Service | Elite Catastrophe`;
   const desc = storm
-    ? `24/7 storm damage tree service across ${co.name}, Georgia. Elite Catastrophe deploys from Rome to ${pageCities.map(c => c.name).slice(0, 3).join(', ')} and beyond when severe weather hits.`
+    ? `Tree service and 24/7 storm response across ${co.name}, Georgia, including ${pageCities.map(c => c.name).slice(0, 3).join(', ')}. Tree and roof work available year round, family-owned, based in Rome.`
     : `Tree removal, trimming, and stump grinding across ${co.name}, Georgia, including ${pageCities.map(c => c.name).slice(0, 3).join(', ')}. Family-owned, based in Rome.`;
-  const h1 = storm ? `Storm Response Across ${co.name}` : `Tree Service Across ${co.name}`;
+  const h1 = storm ? `Tree Service & Storm Response Across ${co.name}` : `Tree Service Across ${co.name}`;
   const paragraphs = co.narrative.split(/\n\n+/).map(p => `<p>${esc(p.trim())}</p>`).join('\n        ');
   const hamletLine = (co.hamlets && co.hamlets.length)
     ? `<p>We also cover the smaller communities of ${co.name}, including ${co.hamlets.join(', ')}. If you are anywhere in the county, call and tell us where you are.</p>` : '';
@@ -255,8 +260,8 @@ for (const co of counties) {
           </ul>
         </div>
         <div class="side-card cta">
-          <h3>${storm ? 'Storm hit your area?' : 'Free estimates'}</h3>
-          <p>${storm ? `We run structures-first storm triage across ${esc(co.name)}. Answered around the clock.` : `Serving ${esc(co.name)} from our Rome base. Call for a straight answer and a free estimate.`}</p>
+          <h3>${storm ? 'Tree or storm work?' : 'Free estimates'}</h3>
+          <p>${storm ? `Full tree and roof service across ${esc(co.name)}, available year round, with structures-first storm response when weather hits.` : `Serving ${esc(co.name)} from our Rome base. Call for a straight answer and a free estimate.`}</p>
           <a href="${TEL}" class="btn btn-light">${PH}</a>
         </div>
       </aside>
@@ -271,7 +276,7 @@ for (const co of counties) {
 {
   const r = '../';
   const url = `${BASE}/service-areas/`;
-  const groups = [['home', 'Home Turf', 'Northwest Georgia, where we work every week'], ['storm', 'Storm Response Range', 'Metro Atlanta counties we deploy to when severe weather hits']];
+  const groups = [['home', 'Home Turf', 'Northwest Georgia, where we work every week'], ['storm', 'Storm Response Range', 'Metro Atlanta counties we serve for tree and roof work, with fast storm response']];
   const section = tier => {
     const cos = counties.filter(c => c.tier === tier);
     return cos.map(co => {
@@ -295,7 +300,7 @@ for (const co of counties) {
         <p class="breadcrumbs"><a href="${r}">Home</a> / Service Areas</p>
         <span class="kicker">Where We Work</span>
         <h1>Tree Service Across Northwest Georgia</h1>
-        <p class="lede">Based in Rome, we work the counties around it every week, and when storms tear through the wider region we deploy well past our home turf. Find your county below.</p>
+        <p class="lede">Based in Rome, we cover Northwest Georgia every week and reach across the metro-Atlanta region too. Tree work and roof work in every area we serve, with fast storm response when severe weather hits. Find your county below.</p>
       </div>
     </section>
 
@@ -303,7 +308,7 @@ ${groups.map(([tier, label, blurb]) => `    <section>
       <div class="container">
         <div class="section-head">
           <span class="kicker">${label}</span>
-          <h2>${tier === 'home' ? 'Counties we <strong>cover every week</strong>.' : 'Counties we <strong>deploy to for storms</strong>.'}</h2>
+          <h2>${tier === 'home' ? 'Counties we <strong>cover every week</strong>.' : 'Counties we <strong>serve, storm-ready</strong>.'}</h2>
           <p>${blurb}.</p>
         </div>
         <div class="feature-grid">
