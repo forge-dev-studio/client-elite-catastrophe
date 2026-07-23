@@ -396,6 +396,12 @@ section { position: relative; padding: 88px 0; }
   .hero { padding: 66px 0 76px; }
   .hero-media { max-width: 520px; margin-top: 12px; }
 }
+/* 6-item nav needs room; tablets use the hamburger */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+  .header-inner > .btn-primary { display: none; }
+}
 @media (max-width: 680px) {
   .nav { display: none; }
   .hamburger { display: flex; }
