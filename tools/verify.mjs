@@ -140,6 +140,14 @@ for (const file of files) {
     if (!ok) fail(rel, `broken internal link: ${url}`);
   }
 
+  // 16. contrast guard: bright brand orange (#ff6a00) fails as text on white (2.87:1).
+  // The CSS system routes it correctly via tokens; this catches hand-added inline
+  // color overrides. Orange as background/fill is fine (buttons take ink text), so
+  // only flag it used as an inline text `color`.
+  for (const sm of html.matchAll(/style=["'][^"']*color\s*:\s*(#ff6a00|#f60|rgb\(\s*255\s*,\s*106\s*,\s*0)/gi)) {
+    fail(rel, `bright orange (#ff6a00) as inline text color fails contrast on white; use --orange-ink #c2410c`);
+  }
+
   // 9. no em/en dashes anywhere in copy
   if (/&mdash;|&ndash;|&#8212;|&#8211;|&#x2014;|&#x2013;/i.test(html)) fail(rel, 'em/en dash entity in HTML');
   const text = html
