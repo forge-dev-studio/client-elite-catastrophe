@@ -145,7 +145,11 @@ for (const c of cities) {
     : `Tree removal, trimming, and stump grinding in ${c.name}, Georgia. Elite Catastrophe serves ${c.county} with careful tree work and 24/7 storm response.`;
   const h1 = storm ? `Storm Damage & Emergency Tree Service in ${c.name}, GA` : `Tree Service in ${c.name}, Georgia`;
   const paragraphs = c.narrative.split(/\n\n+/).map(p => `<p>${esc(p.trim())}</p>`).join('\n        ');
-  const siblings = (co.cities || []).filter(s => s !== c.slug).map(s => byslug[s]).filter(Boolean).slice(0, 5);
+  // rotating sibling window: each city links the next 4 in its county (wrapping),
+  // so every city (incl. the last one, e.g. Mableton) gets even inbound links
+  const _ci = (co.cities || []).indexOf(c.slug);
+  const _rot = (co.cities || []).slice(_ci + 1).concat((co.cities || []).slice(0, _ci));
+  const siblings = _rot.map(s => byslug[s]).filter(Boolean).slice(0, 4);
   const services = storm
     ? [['emergency-tree-service', '24/7 emergency tree service', 'when a storm drops a tree on your home'],
        ['storm-damage-restoration', 'Storm damage restoration', 'from the tree to the roof it landed on'],
