@@ -35,6 +35,7 @@ function head(title, desc, url, r, ogType = 'website', jsonld = '') {
   <meta property="og:description" content="${esc(desc)}">
   <meta property="og:image" content="${BASE}/assets/img/logo.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="${r}assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
