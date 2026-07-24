@@ -383,7 +383,7 @@ section { position: relative; padding: 88px 0; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 44px; padding: 64px 0 44px; }
 .footer .logo .l1 { color: var(--white); }
 .footer .logo .l2 { color: var(--orange); }
-.footer h4 { color: var(--white); font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 16px; }
+.footer h3 { color: var(--white); font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 16px; }
 .footer ul { display: grid; gap: 9px; font-size: .9rem; }
 .footer .tagline { font-size: .9rem; margin-top: 16px; max-width: 30ch; color: var(--on-dark-mut); }
 .footer-bottom { border-top: 1px solid var(--ink-3); padding: 22px 0; font-size: .78rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }

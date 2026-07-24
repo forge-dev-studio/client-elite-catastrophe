@@ -5,6 +5,7 @@
   "scripts": {
     "verify": "node tools/verify.mjs",
     "areas": "node tools/assemble-areas.mjs && node tools/generate-areas.mjs",
-    "sitemap": "node tools/generate-sitemap.mjs"
+    "sitemap": "node tools/generate-sitemap.mjs",
+    "build": "node tools/assemble-areas.mjs && node tools/generate-areas.mjs && node tools/polish.mjs && node tools/seo-linkfix.mjs && node tools/breadcrumb-schema.mjs && node tools/set-noindex.mjs && node tools/add-favicon.mjs && node tools/clean-links.mjs && node tools/generate-sitemap.mjs && node tools/verify.mjs"
   }
 }
