@@ -16,6 +16,28 @@ const BASE = site.baseUrl.replace(/\/$/, '');
 const TEL = 'tel:+14707778676';
 const PH = '470-77-STORM';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// Render a narrative into <p> blocks. Respect authored blank-line breaks (counties);
+// if a narrative is one long blob (no \n\n), auto-split into ~3 balanced paragraphs at
+// sentence boundaries so it does not read as a wall of text (matters most on mobile).
+// Never splits mid-sentence, never alters a word.
+const toParagraphs = (text) => {
+  const t = String(text).trim();
+  let paras;
+  if (/\n\n/.test(t)) {
+    paras = t.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+  } else {
+    const sentences = t.split(/(?<=[.!?])\s+/).filter(Boolean);
+    const total = sentences.reduce((n, s) => n + s.split(/\s+/).length, 0);
+    const target = total / 3;
+    paras = []; let cur = [], curW = 0;
+    for (const s of sentences) {
+      cur.push(s); curW += s.split(/\s+/).length;
+      if (curW >= target && paras.length < 2) { paras.push(cur.join(' ')); cur = []; curW = 0; }
+    }
+    if (cur.length) paras.push(cur.join(' '));
+  }
+  return paras.map(p => `<p>${esc(p)}</p>`).join('\n        ');
+};
 const byslug = Object.fromEntries(cities.map(c => [c.slug, c]));
 const countyBySlug = Object.fromEntries(counties.map(c => [c.slug, c]));
 
@@ -146,7 +168,7 @@ for (const c of cities) {
     ? `Tree removal, storm damage cleanup, and roof work in ${c.name}, ${c.county}. Elite Catastrophe serves ${c.name} year round, with fast 24/7 storm response.`
     : `Tree removal, trimming, and stump grinding in ${c.name}, Georgia. Elite Catastrophe serves ${c.county} with careful tree work and 24/7 storm response.`;
   const h1 = storm ? `Storm Damage & Emergency Tree Service in ${c.name}, GA` : `Tree Service in ${c.name}, Georgia`;
-  const paragraphs = c.narrative.split(/\n\n+/).map(p => `<p>${esc(p.trim())}</p>`).join('\n        ');
+  const paragraphs = toParagraphs(c.narrative);
   // rotating sibling window: each city links the next 4 in its county (wrapping),
   // so every city (incl. the last one, e.g. Mableton) gets even inbound links
   const _ci = (co.cities || []).indexOf(c.slug);
@@ -227,7 +249,7 @@ for (const co of counties) {
     ? `Tree service and 24/7 storm response across ${co.name}, Georgia, including ${pageCities.map(c => c.name).slice(0, 3).join(', ')}. Tree and roof work available year round, family-owned, based in Rome.`
     : `Tree removal, trimming, and stump grinding across ${co.name}, Georgia, including ${pageCities.map(c => c.name).slice(0, 3).join(', ')}. Family-owned, based in Rome.`;
   const h1 = storm ? `Tree Service & Storm Response Across ${co.name}` : `Tree Service Across ${co.name}`;
-  const paragraphs = co.narrative.split(/\n\n+/).map(p => `<p>${esc(p.trim())}</p>`).join('\n        ');
+  const paragraphs = toParagraphs(co.narrative);
   const hamletLine = (co.hamlets && co.hamlets.length)
     ? `<p>We also cover the smaller communities of ${co.name}, including ${co.hamlets.join(', ')}. If you are anywhere in the county, call and tell us where you are.</p>` : '';
   const jsonld = JSON.stringify({
